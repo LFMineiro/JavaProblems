@@ -12,8 +12,8 @@ public class CalculadoraController {
 
     @GetMapping("/soma")
     public String getSoma(
-        @RequestParam Integer a, 
-        @RequestParam Integer b
+        @RequestParam(defaultValue = "0") Integer a, 
+        @RequestParam(defaultValue = "0") Integer b
 
     ) {
         Integer res = a + b;
