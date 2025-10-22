@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) {
         int sum = 0;
         int prod = 1;
-        float MA, MG;
+        double MA, MG;
         
         Scanner in = new Scanner(System.in);
         ArrayList<Integer> numList = new ArrayList<Integer>();
@@ -36,9 +36,11 @@ public class Main {
             prod *= numList.get(i);
         }
         MA = sum/n;
+        MG = Math.pow(prod, (1/n));
         // System.out.println(numList);
         ArrayList<Integer> ordernedList = bubbleSort(numList);
-        System.out.println("Media: " + MA); 
+        System.out.println("Media Aritimetca: " + MA); 
+        System.out.println("Media Geometrica: " + MG); 
         System.out.println("Menor numero: " + ordernedList.get((0))); 
         System.out.println("Maior numero: " + ordernedList.get(n -1)); 
 
